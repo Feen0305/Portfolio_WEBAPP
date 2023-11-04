@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Phoorin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_intro.css">
+    <script src="https://kit.fontawesome.com/bda97bf43e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav id = "nav">
+                <div class="logo"><a href="index.html">Portfolio</a></div>
+                <ul>
+                    <li><a href="#header">Me</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Feen Phoorin ,</p>
+                <h1><span id="content1">Who Want To Be </span><span id="content2">Your boyfriend</span></h1>
+            </div>
+        </div>
+    </div>
+    <!------------------about---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic/pic_02.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="textdescribe">
+                        <p>สวัสดีครับ ผมนายภูรินทร์ จีนพวด ชื่อเล่นฟีน อายุ 18 ปี กำลังศึกษาอยู่ที่ภาควิชาวิศวกรรมคอมพิวเตอร์ 
+                            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี งานอดิเรกคือ ฟังpodcast ดูสิ่งที่เกี่ยวกับคอมพิวเตอร์ อ่านหนังสือ เล่นบาสเกตบอล ฟังเพลง ดูวิว และคิดถึงเธอ</p>
+        
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills" >
+                            <ul>
+                                <li><span>Programming Languages</span><br>C, Python, HTML & CSS</br></li>
+                                <li><span>Software Skills</span><br>Visual Studio Code, TinkerCAD, Fusion360</br>Photoshop, Premiere Pro, SketchUp</li>
+                                <li><span>Other Skills</span><br>Circuit, 2D&3D Modeling</br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>อนุบาล 1 - ประถมศึกษา 1</span><br>โรงเรียนอนุบาลบ้านจันทร์</br></li>
+                                <li><span>ประถมศึกษาปีที่ 2-6</span><br>โรงเรียนเรวดีพัทลุง</br></li>
+                                <li><span>มัธยมศึกษาปีที่ 1-3</span><br>โรงเรียนสระแก้ว</br></li>
+                                <li><span>มัธยมศึกษาปีที่ 4-6</span><br>โรงเรียนสระแก้ว<span class="gpax"> GPAX : 3.95</span></br></li>
+                                <li><span>อุดมศึกษา ตอนนี้</span><br>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</br>ภาควิชาวิศวกรรมคอมพิวเตอร์</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------------------Contact---------------->
+<div id="contact">
+    <footer>
+        <p>Phoorin Chinphuad</p>
+        <p>For want to know me more - please click on the link below</p>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100014867464209"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/2005fp.py/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:pheen.phoorin@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>CopyRight By Phoorin Chinphuad</p>
+    </footer>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>

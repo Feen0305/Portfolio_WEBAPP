@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Prompt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style_ind.css">
+        <title>Portfolio Phoorin</title>
+        <script src="https://kit.fontawesome.com/002f7329f7.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">Portfolio</a></div>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="dropdown">
+                <ul class="links">
+                    <li><a href="introduction.html#header">ME</a></li>
+                    <li><a href="introduction.html#about">About</a></li>
+                    <li><a href="introduction.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section id="Home">
+                <div class="circular-container">
+                    <img class="circular-image" src="picture/3.JPG" alt="Circular Image">
+                </div>
+                <div class="rntextcontainer">
+                    <div class="paragraph">
+                        <h1>Welcome to My Introduction...</h1>
+                    </div>
+                </div>
+                
+                <a href="introduction.html" class="action_btn">Get Started</a>
+            </section>
+        </main>
+        
+        
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDown = document.querySelector('.dropdown')
+
+            toggleBtn.onclick = function(){
+                dropDown.classList.toggle('open')
+                const isOpen = dropDown.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+            }
+        </script>
+    </body>
+</html>
